@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request, Form, HTTPException
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
+from datetime import datetime, timedelta
 
 from typing import Annotated
 
@@ -8,6 +9,7 @@ from jose import jwt, JWTError
 
 
 SECRET_KEY = "a7bba3231648f6e791aa55c0af139564a106670a50715900b3ce2863e72bc06c"
+TOKEN_SECONDS_EXP = 20
 
 db_users = {
     "yugoso": {
@@ -36,6 +38,12 @@ def auth(password: str, password_plane: str):
         return True
     return False
 
+def create_token(data: list):
+    data_token = data.copy()
+    data_token["exp"] = datetime.utcnow() + timedelta(seconds=TOKEN_SECONDS_EXP)
+    token_jwt = jwt.encode(data_token, key=SECRET_KEY, algorithm="HS256")
+    return token_jwt
+
 @app.get("/", response_class=HTMLResponse)
 def root(request: Request):
     return jinja2_templates.TemplateResponse("index.html", {"request": request})
@@ -58,8 +66,10 @@ def login(username: Annotated[str, Form()], password: Annotated[str, Form()]):
             status_code=401,
             detail="Alalo mr robot eahhhh"
         )
+    token = create_token({"username": user_data["username"]})
+    return RedirectResponse(
+        "/users/dashboard",
+        status_code=302,
+        headers={"set-cookie": f"accsess_token={token}; Max-Age = {TOKEN_SECONDS_EXP}"}
 
-    return {
-        "username": username,
-        "password": password
-    }
+    )
