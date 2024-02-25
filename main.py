@@ -3,6 +3,11 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from typing import Annotated
 
+
+db_users = {
+    "gregory": []
+}
+
 app = FastAPI()
 
 jinja2_templates = Jinja2Templates(directory="templates")
