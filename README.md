@@ -1,3 +1,29 @@
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 2em;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+ 
+ 
+ 
  <h1>JWT-LOGIN-PYTHON-FASTAPI</h1>
 
  <p>Pequeño proyecto dedicado a crear el backend para un Login con jwt, fastAPi y python-jose.</p>
