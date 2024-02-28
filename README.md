@@ -1,6 +1,6 @@
  <h1>JWT-LOGIN-PYTHON-FASTAPI</h1>
 
- <p>Descripción concisa del propósito y funcionalidades de tu aplicación.</p>
+ <p>Pequeño proyecto dedicado a crear el backend para un Login con jwt, fastAPi y python-jose.</p>
 
  <h2>Instalación</h2>
 
