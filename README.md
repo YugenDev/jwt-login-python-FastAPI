@@ -1,27 +1,3 @@
-<style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 2em;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        h2 {
-            color: #555;
-        }
-
-        code {
-            background-color: #f4f4f4;
-            padding: 0.2em;
-            font-family: 'Courier New', Courier, monospace;
-        }
-    </style>
-
-
-
  <h1>Nombre de tu Proyecto</h1>
 
  <p>Descripción concisa del propósito y funcionalidades de tu aplicación.</p>
@@ -45,10 +21,10 @@
  <h2>Tecnologías Utilizadas</h2>
 
   <p>
-        <img src="ruta/al/logo/python.png" alt="Logo de Python" height="50">
-        <img src="ruta/al/logo/fastapi.png" alt="Logo de FastAPI" height="50">
-        <img src="ruta/al/logo/uvicorn.png" alt="Logo de Uvicorn" height="50">
-        <img src="ruta/al/logo/jose.png" alt="Logo de JOSE-Python" height="50">
+        <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="Logo de Python" height="50">
+        <img src="https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" alt="Logo de FastAPI" height="50">
+        <img src="https://www.uvicorn.org/uvicorn.png" alt="Logo de Uvicorn" height="50">
+        <img src="https://pypi.org/static/images/logo-small.2a411bc6.svg" alt="Logo de JOSE-Python" height="50">
         <!-- Agrega más logos según sea necesario -->
     </p>
 
@@ -63,9 +39,3 @@
         <li>Sube tus cambios a tu repositorio en GitHub (<code>git push origin feature/nueva-funcionalidad</code>)</li>
         <li>Abre un pull request para que tus cambios sean revisados</li>
     </ol>
-
- <h2>Licencia</h2>
-
- <p>Este proyecto está licenciado bajo la <a href="enlace-a-licencia">Licencia XYZ</a>.</p>
-
-
